@@ -200,6 +200,7 @@ def run(cfg: GeoRunConfig):
 
             # Geocode
             isce3.geocode.geocode_slc(geo_data_blocks=geo_data_blks,
+                                      mask_block=np.zeros(shape=geo_data_blks[0].shape,dtype=np.uint8),
                                       rdr_data_blocks=rdr_data_blks,
                                       dem_raster=dem_raster,
                                       radargrid=radar_grid,

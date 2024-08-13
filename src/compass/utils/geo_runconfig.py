@@ -68,10 +68,10 @@ class GeoRunConfig(RunConfig):
         groups_cfg = cfg['runconfig']['groups']
 
         burst_database_file = groups_cfg['static_ancillary_file_group']['burst_database_file']
-        if not os.path.isfile(burst_database_file):
-            err_str = '{burst_database_file} not found'
-            error_channel.log(err_str)
-            raise FileNotFoundError(err_str)
+        # if not os.path.isfile(burst_database_file):
+        #     err_str = '{burst_database_file} not found'
+        #     error_channel.log(err_str)
+        #     raise FileNotFoundError(err_str)
 
         geocoding_dict = groups_cfg['processing']['geocoding']
         check_geocode_dict(geocoding_dict)
